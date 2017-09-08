@@ -1,6 +1,7 @@
 /**
  * Created by U160964 on 9/8/2017.
  */
+/* https://material.angular.io/components/table/overview */
 import {Component} from '@angular/core';
 import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';

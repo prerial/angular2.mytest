@@ -1,22 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
-import {DataSource} from '@angular/cdk/collections';
-import {Observable} from 'rxjs/observable';
-import 'rxjs/add/observable/of';
-
 import { RouterModule }   from '@angular/router';
 
 import { MdTableModule, MdTooltipModule } from '@angular/material';
+import { NgGridModule } from "angular2-grid";
 
 import { AppComponent } from './app.component';
-import { NgGridModule } from "angular2-grid";
 import { HeroesComponent } from './heroes/hero.component';
 import { GridComponent } from './grid/grid.component';
 import { TableBasicExample } from './table/table.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -44,12 +37,6 @@ import { TableBasicExample } from './table/table.component';
         path: 'table',
         component: TableBasicExample
       },
- /*
-      {
-        path: '/',
-        component: AppComponent
-      },
-*/
       { path: '**', redirectTo: './app' }
     ])
   ],
