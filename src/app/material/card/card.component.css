@@ -1,0 +1,22 @@
+.docs-component-category-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.docs-component-category-list-item {
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+  width: 260px;
+}
+.example-card {
+  width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../../assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
