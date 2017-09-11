@@ -4,36 +4,46 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 import { RouterModule }   from '@angular/router';
 
-import { MdCardModule, MdTableModule, MdTooltipModule } from '@angular/material';
-import { NgGridModule } from "angular2-grid";
+//import { MdCardModule, MdTableModule, MdTooltipModule } from '@angular/material';
+//import { NgGridModule } from "angular2-grid";
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/hero.component';
-import { GridComponent } from './grid/grid.component';
-import { TableBasicExample } from './table/table.component';
-import { CardOverviewExample } from './material/card/card.component';
+import { MaterialModule } from './material/app.module';
+
+//import { GridComponent } from './grid/grid.component';
+//import { TableBasicExample } from './table/table.component';
+//import { CardOverviewExample } from './material/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    GridComponent,
-    CardOverviewExample,
-    TableBasicExample
+//    MaterialComponent,
+//    GridComponent,
+//    CardOverviewExample,
+//    TableBasicExample
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    NgGridModule,
+//    NgGridModule,
+    MaterialModule,
 
-    MdCardModule,
-    MdTableModule,
-    MdTooltipModule,
+//    MdCardModule,
+//    MdTableModule,
+//    MdTooltipModule,
     RouterModule.forRoot([
       {
         path: 'heroes',
         component: HeroesComponent
       },
+      {
+        path: 'material',
+        component: MaterialModule
+      },
+
+/*
       {
         path: 'grid',
         component: GridComponent
@@ -46,6 +56,7 @@ import { CardOverviewExample } from './material/card/card.component';
         path: 'card',
         component: CardOverviewExample
       },
+*/
       { path: '**', redirectTo: './app' }
     ])
   ],
