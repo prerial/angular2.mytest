@@ -9,7 +9,7 @@ import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/hero.component';
-import { MaterialModule } from './material/app.module';
+//import { MaterialModule } from './material/app.module';
 
 //import { GridComponent } from './grid/grid.component';
 //import { TableBasicExample } from './table/table.component';
@@ -28,7 +28,7 @@ import { MaterialModule } from './material/app.module';
     BrowserModule,
     FormsModule,
 //    NgGridModule,
-    MaterialModule,
+//    MaterialModule,
 
 //    MdCardModule,
 //    MdTableModule,
@@ -38,12 +38,11 @@ import { MaterialModule } from './material/app.module';
         path: 'heroes',
         component: HeroesComponent
       },
+/*
       {
         path: 'material',
         component: MaterialModule
       },
-
-/*
       {
         path: 'grid',
         component: GridComponent
