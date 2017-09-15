@@ -46,10 +46,12 @@ const HEROES: Hero[] = [
 
 export class HeroesComponent {
   title = 'Tour of Heroes';
-  hero: Hero = {
+  hero: Hero = HEROES[0];
+/*{
     id: 1,
     name: 'Windstorm'
   };
+*/
   heroes = HEROES;
   selectedHero: Hero;
   onSelect(hero: Hero): void {
