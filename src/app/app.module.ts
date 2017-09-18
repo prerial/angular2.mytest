@@ -2,13 +2,17 @@ import "@angular/material/prebuilt-themes/indigo-pink.css";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
-import { RouterModule }   from '@angular/router';
 
-//import { MdCardModule, MdTableModule, MdTooltipModule } from '@angular/material';
+import { MdCardModule, MdTableModule, MdTooltipModule, MdToolbarModule } from '@angular/material';
 //import { NgGridModule } from "angular2-grid";
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/hero.component';
+import { RoutingModule }   from './app-routing.module';
+
+import { HeroesModule } from './heroes/heroes.module';
+
+import { HeroAppComponent } from './heroes/hero-app.component';
+
 //import { MaterialModule } from './material/app.module';
 
 //import { GridComponent } from './grid/grid.component';
@@ -18,7 +22,7 @@ import { HeroesComponent } from './heroes/hero.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
+    HeroAppComponent,
 //    MaterialComponent,
 //    GridComponent,
 //    CardOverviewExample,
@@ -27,37 +31,15 @@ import { HeroesComponent } from './heroes/hero.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HeroesModule,
 //    NgGridModule,
 //    MaterialModule,
-
+    MdToolbarModule,
 //    MdCardModule,
 //    MdTableModule,
 //    MdTooltipModule,
-    RouterModule.forRoot([
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      },
-/*
-      {
-        path: 'material',
-        component: MaterialModule
-      },
-      {
-        path: 'grid',
-        component: GridComponent
-      },
-      {
-        path: 'table',
-        component: TableBasicExample
-      },
-      {
-        path: 'card',
-        component: CardOverviewExample
-      },
-*/
-      { path: '**', redirectTo: './app' }
-    ])
+    RoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
