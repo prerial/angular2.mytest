@@ -1,25 +1,40 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<!--
+<md-toolbar>
+  <ul class="toptoolbar">
+    <li>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active" href="#">Home</a>
+    </li>
+    <li>
+      <button (click)="showDashboard('1')">AAAA</button>
+      <a class="navbar-brand" routerLink="/heroes" routerLinkActive="active" href="#">Tour of Heroes</a>
+    </li>
+    <li>
+      <a class="navbar-brand" routerLink="/material" routerLinkActive="active" href="#">Material</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://angular.io/tutorial">Tutorial</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://blog.angular.io//">Angular blog</a>
+    </li>
+  </ul>
+</md-toolbar>
+-->
 
-<ul class="toptoolbar">
-  <li>
-    <a class="navbar-brand" routerLink="/" routerLinkActive="active" href="#">Home</a>
-  </li>
-  <li>
-    <a class="navbar-brand" routerLink="/heroes" routerLinkActive="active" href="#">Tour of Heroes</a>
-  </li>
-  <li>
-    <a class="navbar-brand" routerLink="/material" routerLinkActive="active" href="#">Material</a>
-  </li>
-  <li>
-   <a target="_blank" href="https://angular.io/tutorial">Tutorial</a>
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
-  </li>
-  <li>
-    <a target="_blank" href="https://blog.angular.io//">Angular blog</a>
-  </li>
-</ul>
-<br/><br/><br/><br/>
-<router-outlet style="border:1px solid red"></router-outlet>
+<md-toolbar>
+  <nav>
+    <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+    <a routerLink="/superheroes" routerLinkActive="active">Heroes</a>
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+    <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+  </nav>
+</md-toolbar>
+
+<router-outlet></router-outlet>
+<router-outlet name="popup"></router-outlet>
 
