@@ -1,24 +1,28 @@
 h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
 }
-ul.toptoolbar {
-  font-family: Arial, Helvetica, sans-serif;
-  position:absolute;
-  top:0;
-  height:46px;
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
 }
-ul.toptoolbar li {
-  list-style-type: none;
-  margin-left:20px;
-  float:left;
-  height:46px;
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
 }
-ul.toptoolbar a {
-  text-decoration:none;
-  font-size:18px;
+nav a:visited, a:link {
+  color: #607D8B;
 }
-ul.toptoolbar a:hover {
-   text-decoration:underline;
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
 }

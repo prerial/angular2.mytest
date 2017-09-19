@@ -1,21 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'my-dashboard',
-  template: `
-      <div>
-         <nav>
-          <a routerLink="/dashboard" class="active">Dashboard</a>
-          <a routerLink="/heroes">Heroes</a>
-        </nav>
-      </div>
-      <h2>Dashboard</h2>
-  `,
-  styleUrls: ['./hero.component.css']
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+
+export class DashboardComponent implements OnInit {
+
+  heroes: Hero[] = [];
+
   constructor(
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    private heroService: HeroService
+  ) { }
+
+  ngOnInit(): void {
+    this.heroService.getHeroes()
+      .then(heroes => this.heroes = heroes.slice(1, 5));
+  }
 }
