@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
       <div>
          <nav>
           <a routerLink="/dashboard">Dashboard</a>
-          <a routerLink="/heroes" class="active">Heroes</a>
+          <a routerLink="/heroes" class="active">List</a>
         </nav>
       </div>
       <h2>My Heroes</h2>
@@ -20,7 +20,12 @@ import { ActivatedRoute } from '@angular/router';
           <span class="badge">{{hero.id}}</span><span class="content">{{hero.name}}</span>
         </li>
       </ul>
-      <hero-detail [hero]="selectedHero"></hero-detail>
+      <div *ngIf="selectedHero">
+        <h2>
+          {{selectedHero.name | uppercase}} is my hero
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+      </div>
 `,
   styleUrls: ['./hero.component.css']
 })
@@ -37,6 +42,10 @@ export class HeroesComponent implements OnInit{
 
   ngOnInit(): void {
     this.getHeroes();
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedHero.id]);
   }
 
   onSelect(hero: Hero): void {
