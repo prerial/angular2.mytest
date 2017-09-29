@@ -1,0 +1,41 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <li><a href="#/asyncFunctions">Async Functions (2017)</a></li>
+                <li><a href="#/stringMethods">String Methods (2017)</a></li>
+                <li><a href="#/sharedMemory">Shared memory and atomics (2017)</a></li>
+                <li><a href="#objectEntries">Object.entries() and Object.values() (2017)</a></li>
+                <li><a href="#/objectDescriptors">Object.getOwnPropertyDescriptors() (2017)</a></li>
+                <li><a href="#/trailingCommas">Trailing commas (2017)</a></li>
+            </ul>
+
+            <form ng-submit="formSubmit()" class="form">
+               <div class="col-md-4">
+                   <h3>Please Login</h3>
+
+                   <div class="form-group">
+                        <input type="text" class="form-control" ng-model="username" placeholder="Please enter Username" required=""/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" ng-model="password" placeholder="Please enter Password" required=""/>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Login</button>
+                        <span class="text-danger">{{ error }}</span>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
